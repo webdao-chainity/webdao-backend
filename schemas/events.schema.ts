@@ -43,6 +43,9 @@ export class Event {
 
   @Prop([String])
   whitelists: string[];
+
+  @Prop()
+  contract: string;
 }
 
 export const EventSchema = SchemaFactory.createForClass(Event);

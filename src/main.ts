@@ -10,7 +10,7 @@ const configService = new ConfigService();
 async function bootstrap() {
   const app = await NestFactory.create(AppModule, {
     cors: {
-      origin: configService.get('NODE_ENV', '*'),
+      origin: configService.get('CORS', '*'),
       methods: ['GET', 'HEAD', 'PUT', 'PATCH', 'POST', 'DELETE'],
     },
   });
